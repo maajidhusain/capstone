@@ -9,7 +9,7 @@ returns.drop('Date', axis=1, inplace=True)
 def permutation(df):
     permi=df.copy()
     df2=df.drop(['Representative','Party','House'],axis=1)
-    columns=['ReportDate','TransactionDate','Ticker','Transaction','Amount','Range','Sentiment','Price','Low_End','High_End','Adjusted_Low_End','Adjusted_High_End','Running_Portfolio_Low_End','Running_Portfolio_High_End','Est_Portfolio_Value','Shares_High_End','Shares_Low_End']
+    columns=['ReportDate','TransactionDate','Ticker','Transaction','Amount','Range','Sentiment','Price','Low_End','High_End','Adjusted_Low_End','Adjusted_High_End','Running_Portfolio_Low_End','Running_Portfolio_High_End','Est_Portfolio_Value','Shares_High_End','Shares_Low_End','Variance']
     permi[columns]=pd.DataFrame(np.random.permutation(df2))
     return permi
 
